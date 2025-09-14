@@ -1,0 +1,6 @@
+cs330 is a course for intro to operating system.
+cs768
+cs234
+ec212
+chm112
+mt216cs193
