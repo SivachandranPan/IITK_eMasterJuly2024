@@ -1,0 +1,10 @@
+ esc101 is a great course to start with.
+ phy201 is a course number for physics department.
+ eco201
+ ee201
+ cs330 is a course for intro to operating system.
+ cs768
+ cs234
+ ec212
+ chm112
+ mt216cs193
