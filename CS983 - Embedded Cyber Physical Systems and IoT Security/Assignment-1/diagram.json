@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "author": "Shiva C",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0.6, "left": -0.6, "attrs": {} },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 271.4,
+      "left": 47.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 284.4,
+      "left": 3.8,
+      "attrs": { "color": "orange" }
+    },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": 80.8, "left": 328.62, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 102,
+      "left": 445.4,
+      "attrs": { "color": "purple" }
+    },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd1",
+      "top": 25.6,
+      "left": -436,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -132.9,
+      "left": 15.1,
+      "attrs": { "distance": "5" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -99.6,
+      "left": 205.4,
+      "attrs": { "color": "white" }
+    }
+  ],
+  "connections": [
+    [ "ntc1:GND", "uno:GND.2", "black", [ "h38.4", "v-67.2", "h-51.3" ] ],
+    [ "ntc1:VCC", "uno:5V", "red", [ "h9.6", "v-67.2", "h-32.6" ] ],
+    [ "ntc1:OUT", "uno:A5", "yellow", [ "h0" ] ],
+    [ "led1:A", "uno:3", "orange", [ "v28.8", "h268.8", "v-384", "h-71.2" ] ],
+    [ "led1:C", "uno:GND.2", "black", [ "v9.6", "h-28.4", "v-86.4", "h182.4", "v-57.5" ] ],
+    [ "pir1:VCC", "uno:5V", "red", [ "v67.2", "h-205.4" ] ],
+    [ "pir1:OUT", "uno:5", "white", [ "v9.6", "h-57.74", "v-201.6", "h-109.4" ] ],
+    [ "pir1:GND", "uno:GND.3", "black", [ "v38.4", "h-205.86" ] ],
+    [ "led2:A", "uno:6", "blue", [ "h28.8", "v-153.6", "h-301.3" ] ],
+    [ "led2:C", "uno:GND.3", "black", [ "v76.8", "h-282" ] ],
+    [ "lcd1:GND", "uno:GND.1", "black", [ "h-28.8", "v-67.2", "h595.2", "v19.2" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h-28.8", "v163.3", "h620.2" ] ],
+    [ "lcd1:SDA", "uno:A4.2", "gray", [ "h-48", "v-95.8", "h576.4" ] ],
+    [ "lcd1:SCL", "uno:A5.2", "#8f4814", [ "h-19.2", "v-86.1", "h537.6" ] ],
+    [ "ultrasonic1:GND", "uno:GND.1", "black", [ "v48", "h-1.5" ] ],
+    [ "ultrasonic1:VCC", "uno:5V", "red", [ "v9.6", "h-105.6", "v240", "h178.6" ] ],
+    [ "ultrasonic1:TRIG", "uno:9", "green", [ "v19.2", "h66" ] ],
+    [ "ultrasonic1:ECHO", "uno:2", "purple", [ "v9.6", "h129.5" ] ],
+    [ "led3:A", "uno:10", "magenta", [ "v19.2", "h-77.5" ] ],
+    [ "led3:C", "uno:GND.1", "black", [ "v9.6", "h-76.4", "v57.6" ] ]
+  ],
+  "dependencies": {}
+}
